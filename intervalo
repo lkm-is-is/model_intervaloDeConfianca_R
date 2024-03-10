@@ -1,0 +1,25 @@
+#exemplo_amostra
+> amostra <- c(23, 25, 28, 30, 32, 35, 38, 40, 42, 45)
+> 
+  > #confiança(em percentagem)
+  > confianca <- 95
+  > 
+    > #tamanho
+    > n <- length(amostra)
+    > 
+      > #mean
+      > media <- mean(amostra)
+      > 
+        > #desvio-padrao
+        > desvio_padrao <- sd(amostra)
+        > 
+          > #erropadrao
+          > erro_padrao <- desvio_padrao / sqrt(n)
+          > 
+            > #ZCritico
+            > z <- qnorm((1 + confianca/100) / 2)
+            > 
+              > #calculo
+              > limite_inferior <- media - z * erro_padrao
+              > limite_superior <- media + z * erro_padrao
+              
